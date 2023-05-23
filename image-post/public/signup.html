@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>サインアップ</title>
+    <link rel="stylesheet" href="./assets/css/signup.css">
+    <script src="./js/signup.js" defer></script>
+</head>
+<body class="l-body">
+    <h1 class="p-heading">サインアップ</h1>
+    <form id="signup-form" class="p-form">
+        <div class="p-form__item">
+          <label for="name" class="p-form__label">ユーザー名</label>
+          <input type="text" id="name" class="p-form__input" required>
+        </div>
+        <div class="p-form__item">
+          <label for="profile" class="p-form__label">プロフィール</label>
+          <input type="text" id="profile" class="p-form__input" required>
+        </div>
+        <div class="p-form__item">
+          <label for="date_of_birth" class="p-form__label">生年月日</label>
+          <input type="date" id="date_of_birth" class="p-form__input" required>
+        </div>
+        <div class="p-form__item">
+          <label for="password" class="p-form__label">パスワード</label>
+          <input type="password" id="password" class="p-form__input" required>
+        </div>
+        <button type="submit" id="signup-btn" class="p-form__button">サインアップ</button>
+      </form>      
+</body>
+</html>

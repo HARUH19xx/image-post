@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Conversation App</title>
+    <script src="./js/dashboard.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <h1 class="my-4">画像で会議する部屋</h1>
+        <h2>われらが光をあまねく世界に！！</h2>
+        <div class="mb-3">
+            <form id="image-upload">
+                <label for="image-select" class="form-label">画像をアップロード</label>
+                <input type="file" class="form-control-file" id="image-select" name="image">
+                <textarea name="comment" placeholder="コメントを入力してください（100文字以内）" maxlength="100" required></textarea>
+                <button type="submit" class="btn btn-primary mt-2">アップロード</button>
+            </form>
+        </div>
+        <div class="row">
+            <!-- 画像表示エリア -->
+        </div>
+    </div>
+    <button id="edit-profile-btn">プロフィール編集</button>
+    <button id="logout-btn">ログアウト</button>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="./js/edit.js" defer></script>
+  <title>編集画面</title>
+</head>
+<body>
+  <h1>ユーザー情報の編集</h1>
+  <form id="edit-form">
+    <label for="name">名前:</label>
+    <input type="text" id="name" name="name" required>
+    <br>
+    <label for="profile">プロフィール:</label>
+    <textarea id="profile" name="profile" required></textarea>
+    <br>
+    <label for="date_of_birth">生年月日:</label>
+    <input type="date" id="date_of_birth" name="date_of_birth" required>
+    <br>
+    <button type="submit" id="edit-btn">編集を保存</button>
+  </form>
+  <button id="cancel-btn">キャンセル</button>
+</body>
+</html>

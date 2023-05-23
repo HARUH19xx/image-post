@@ -1,0 +1,28 @@
+version: '3.9'
+services:
+  app:
+    build: .
+    ports:
+      - "3000:3000"
+    depends_on:
+      - mysql
+  mysql:
+    image: mysql:8.0.32
+    container_name: mysql-posts
+    # ホストマシンで3306番ポートを使用している場合、以下のように明示的にポートを指定する必要がある
+    command: --port=3307
+    # environment:
+    #   MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+    #   MYSQL_DATABASE: ${MYSQL_DATABASE}
+    #   MYSQL_USER: ${MYSQL_USER}
+    #   MYSQL_PASSWORD: ${MYSQL_PASSWORD}
+    env_file:
+      - ./.env
+    ports:
+      - "3307:3307"
+    volumes:
+      - mysql-posts-data:/var/lib/mysql
+      - ./init.sql:/docker-entrypoint-initdb.d/init.sql
+
+volumes:
+  mysql-posts-data:

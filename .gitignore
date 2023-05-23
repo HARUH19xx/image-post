@@ -1,0 +1,4 @@
+.env
+./image-post/app/.env
+init.sql
+./image-post/app/components/.env
